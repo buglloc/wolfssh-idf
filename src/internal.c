@@ -10396,13 +10396,13 @@ static int BuildUserAuthRequestEcc(WOLFSSH* ssh,
 {
     wc_HashAlg hash;
     byte digest[WC_MAX_DIGEST_SIZE];
-    word32 digestSz;
+    word32 digestSz = 0;
     word32 begin;
     enum wc_HashType hashId = WC_HASH_TYPE_SHA;
     int ret = WS_SUCCESS;
-    byte* r_ptr;
-    byte* s_ptr;
-    byte* sig_ptr;
+    byte* r_ptr = NULL;
+    byte* s_ptr = NULL;
+    byte* sig_ptr = NULL;
     word32 rSz = ECC_MAX_SIG_SIZE / 2;
     word32 sSz = ECC_MAX_SIG_SIZE / 2;
     word32 sigSz = ECC_MAX_SIG_SIZE;
