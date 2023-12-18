@@ -74,6 +74,12 @@
 #define CURVE25519_SMALL
 #define HAVE_ED25519
 
+#define WOLFSSH_KEYGEN
+#define WOLFSSL_KEY_GEN
+#ifndef WOLFSSH_SMALL_STACK
+  #define WOLFSSH_SMALL_STACK
+#endif
+
 /* when you want to use pkcs7 */
 /* #define HAVE_PKCS7 */
 
